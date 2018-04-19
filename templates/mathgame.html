@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>Matemática - JOGOS EDUCACIONAIS</title>
+		<meta name="description" content='Jogos Educacionais de matemática para crianças. Fixaçao de matéria e conteúdo de maneira lúdica'>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+		
+		<script type="text/javascript" src="js/game.js"></script>
+		<script type="text/javascript" src="js/question.js"></script>
+		<script type="text/javascript" src="js/gamemath.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="alert alert-primary border border-secondary mt-3 shadow">
+				<div class="d-flex align-items-center justify-content-between">
+    					<div class="light">
+						<a href="\" class="text-secondary btn">Jogos Educacionais</a>
+    					</div>
+    					<div>
+						<h2 class="alert-heading">Matemática</h2>
+    					</div>
+				</div>
+			</div>
+			<div class="alert alert-secondary border border-primary mt-3 shadow">
+				<div class="d-flex align-items-center justify-content-between">
+    					<div class="light">
+    						Perguntas: <span id="questions">0</span>
+    					</div>
+    					<div class="light">
+    						Acertos: <span id="answers">0</span>
+    					</div>
+				</div>
+			</div>
+			<div class="col align-self-center">
+				<div class="alert alert-success shadow" id="canvas">
+				
+				</div>
+	    		</div>
+		</div>
+	
+		<script type="text/javascript">
+			var math = new GameMath({"level" : 1,
+									"seed" : null,
+									"canvas" : document.getElementById("canvas"), 
+									"questions" : document.getElementById("questions"), 
+									"answers" : document.getElementById("answers")
+			});
+			math.start();
+			window.JZCodes = window.JZCodes || {};
+			window.JZCodes.Gameduc = window.JZCodes.Gameduc || {}
+			window.JZCodes.Gameduc.math = math;
+		</script>
+	</body>
+</html>
